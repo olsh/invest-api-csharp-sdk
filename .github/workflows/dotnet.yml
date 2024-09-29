@@ -2,6 +2,7 @@ name: build
 
 on:
   push:
+    branches:
   pull_request:
 
 jobs:
@@ -22,10 +23,10 @@ jobs:
     - name: Test
       run: dotnet test -c Release --no-build --verbosity normal
     - name: Pack
-      if: github.ref == 'refs/heads/main'
+      if: github.ref == 'refs/heads/deploy'
       run: dotnet pack -c Release --no-build --include-source
     - name: Publish the package to nuget.org
-      if: github.ref == 'refs/heads/main'
-      run: dotnet nuget push */bin/Release/*.nupkg -k $NUGET_API_KEY -s https://api.nuget.org/v3/index.json --skip-duplicate
+      if: github.ref == 'refs/heads/deploy'
+      run: dotnet nuget push */bin/Release/*.nupkg -k "${{ secrets.GITHUB_TOKEN }}" -s https://nuget.pkg.github.com/olsh/index.json --skip-duplicate
       env:
-        NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
+        NUGET_API_KEY: ${{ secrets.GITHUB_TOKEN }}
