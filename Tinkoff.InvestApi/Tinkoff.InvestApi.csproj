@@ -8,7 +8,7 @@
         <RootNamespace>Tinkoff.InvestApi</RootNamespace>
         <AssemblyName>Tinkoff.InvestApi</AssemblyName>
         <PackageId>Tinkoff.InvestApi</PackageId>
-        <PackageVersion>0.6.17</PackageVersion>
+        <PackageVersion>0.6.18</PackageVersion>
         <Company>Tinkoff</Company>
         <Description>SDK для работы с grpc-интерфейсом торговой платформы Тинькофф Инвестиции</Description>
         <PackageProjectUrl>https://www.tinkoff.ru/invest/</PackageProjectUrl>
@@ -17,11 +17,11 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Google.Api.CommonProtos" Version="2.16.0" />
-        <PackageReference Include="Google.Protobuf" Version="3.29.3" />
-        <PackageReference Include="Grpc.Net.Client" Version="2.67.0" />
-        <PackageReference Include="Grpc.Net.ClientFactory" Version="2.67.0" />
-        <PackageReference Include="Grpc.Tools" Version="2.69.0">
+        <PackageReference Include="Google.Api.CommonProtos" Version="2.17.0" />
+        <PackageReference Include="Google.Protobuf" Version="3.32.0" />
+        <PackageReference Include="Grpc.Net.Client" Version="2.71.0" />
+        <PackageReference Include="Grpc.Net.ClientFactory" Version="2.71.0" />
+        <PackageReference Include="Grpc.Tools" Version="2.72.0">
             <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
             <PrivateAssets>all</PrivateAssets>
         </PackageReference>

@@ -23,8 +23,8 @@ public static class InvestApiClientExtensions
                     var settings = new InvestApiSettings();
                     configureSettings(serviceProvider, settings);
                     options.Address = settings.Sandbox
-                        ? new Uri("https://sandbox-invest-public-api.tinkoff.ru:443")
-                        : new Uri("https://invest-public-api.tinkoff.ru:443");
+                        ? new Uri("https://sandbox-invest-public-api.tbank.ru:443")
+                        : new Uri("https://invest-public-api.tbank.ru:443");
                 })
             .ConfigureChannel((serviceProvider, options) =>
             {

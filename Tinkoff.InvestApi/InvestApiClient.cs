@@ -25,7 +25,7 @@ public class InvestApiClient
     public OperationsService.OperationsServiceClient Operations { get; }
     public OperationsStreamService.OperationsStreamServiceClient OperationsStream { get; }
     public OrdersService.OrdersServiceClient Orders { get; }
-    public OrdersStreamService.OrdersStreamServiceClient OrdersStream { get; set; }
+    public OrdersStreamService.OrdersStreamServiceClient OrdersStream { get; }
     public SandboxService.SandboxServiceClient Sandbox { get; }
     public StopOrdersService.StopOrdersServiceClient StopOrders { get; }
     public UsersService.UsersServiceClient Users { get; }

@@ -1,3 +1,5 @@
+using System.Globalization;
+
 namespace Tinkoff.InvestApi.V1;
 
 public partial class MoneyValue
@@ -11,6 +13,6 @@ public partial class MoneyValue
 
     public string Format()
     {
-        return $"{(decimal) this} {Currency}";
+        return string.Format(CultureInfo.InvariantCulture, "{0} {1}", (decimal)this, Currency);
     }
 }
